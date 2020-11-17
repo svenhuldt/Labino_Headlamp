@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+<TITLE>Microchip MPLAB XC8 C Compiler: 16LF1613 Support Information</TITLE>
+<LINK rel=stylesheet href="" type="text/css">
+</HEAD>
+<BODY>
+<a name="top"><h2 class="">16LF1613 Support Information</h2>
+<h3 class="">#pragma config Usage</h3>
+<h4 class="">#pragma config &lt;setting&gt;=&lt;named value&gt;</h4>
+For example:<br>
+<code>// Oscillator Selection Bits: ECH, External Clock, High Power Mode (4-20 MHz): device clock supplied to CLKIN pins<br>// Power-up Timer Enable: PWRT disabled<br>// MCLR Pin Function Select: MCLR/VPP pin function is MCLR<br>// Flash Program Memory Code Protection: Program memory code protection is disabled<br>// Brown-out Reset Enable: Brown-out Reset enabled<br>// Clock Out Enable: CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin<br>#pragma config FOSC = ECH, PWRTE = OFF, MCLRE = ON, CP = OFF, BOREN = ON, CLKOUTEN = OFF</code><h4 class="">#pragma config &lt;setting&gt;=&lt;literal constant&gt;</h4>
+For example:<br>
+<code>// Oscillator Selection Bits: ECH, External Clock, High Power Mode (4-20 MHz): device clock supplied to CLKIN pins<br>// Power-up Timer Enable: PWRT disabled<br>// MCLR Pin Function Select: MCLR/VPP pin function is MCLR<br>// Flash Program Memory Code Protection: Program memory code protection is disabled<br>// Brown-out Reset Enable: Brown-out Reset enabled<br>// Clock Out Enable: CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin<br>#pragma config FOSC = 0x3, PWRTE = 0x1, MCLRE = 0x1, CP = 0x1, BOREN = 0x3, CLKOUTEN = 0x1</code><h4 class="">#pragma config &lt;register&gt;=&lt;literal constant&gt;</h4>
+For example:
+<br>
+<code>// Oscillator Selection Bits: ECH, External Clock, High Power Mode (4-20 MHz): device clock supplied to CLKIN pins<br>// Power-up Timer Enable: PWRT disabled<br>// MCLR Pin Function Select: MCLR/VPP pin function is MCLR<br>// Flash Program Memory Code Protection: Program memory code protection is disabled<br>// Brown-out Reset Enable: Brown-out Reset enabled<br>// Clock Out Enable: CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin<br>#pragma config CONFIG1 = 0x3FFF</code><br>
+<br>
+For example:
+<br>
+<code>// IDLOC @ 0x8000<br>
+#pragma config IDLOC0 = 0x3FFF</code><br>
+<br>
+<small><a href="#top">Back to top</a></small>
+<h3 class="">#pragma config Settings</h3>
+<h4 class="">Register: CONFIG1 @ 0x8007 </h4>
+<table class="">
+<tr><td><b>FOSC =</b></td><td><b>Oscillator Selection Bits</b></td><td><b></b></td></tr>
+<tr><td>ECH</td><td>ECH, External Clock, High Power Mode (4-20 MHz): device clock supplied to CLKIN pins</td><td></td></tr>
+<tr><td>ECM</td><td>ECM, External Clock, Medium Power Mode (0.5-4 MHz): device clock supplied to CLKIN pins</td><td></td></tr>
+<tr><td>ECL</td><td>ECL, External Clock, Low Power Mode (0-0.5 MHz): device clock supplied to CLKIN pins</td><td></td></tr>
+<tr><td>INTOSC</td><td>INTOSC oscillator: I/O function on CLKIN pin</td><td></td></table>
+<table class="">
+<tr><td><b>PWRTE =</b></td><td><b>Power-up Timer Enable</b></td><td><b></b></td></tr>
+<tr><td>OFF</td><td>PWRT disabled</td><td></td></tr>
+<tr><td>ON</td><td>PWRT enabled</td><td></td></table>
+<table class="">
+<tr><td><b>MCLRE =</b></td><td><b>MCLR Pin Function Select</b></td><td><b></b></td></tr>
+<tr><td>ON</td><td>MCLR/VPP pin function is MCLR</td><td></td></tr>
+<tr><td>OFF</td><td>MCLR/VPP pin function is digital input</td><td></td></table>
+<table class="">
+<tr><td><b>CP =</b></td><td><b>Flash Program Memory Code Protection</b></td><td><b></b></td></tr>
+<tr><td>OFF</td><td>Program memory code protection is disabled</td><td></td></tr>
+<tr><td>ON</td><td>Program memory code protection is enabled</td><td></td></table>
+<table class="">
+<tr><td><b>BOREN =</b></td><td><b>Brown-out Reset Enable</b></td><td><b></b></td></tr>
+<tr><td>ON</td><td>Brown-out Reset enabled</td><td></td></tr>
+<tr><td>NSLEEP</td><td>Brown-out Reset enabled while running and disabled in Sleep</td><td></td></tr>
+<tr><td>SBODEN</td><td>Brown-out Reset controlled by the SBOREN bit in the BORCON register</td><td></td></tr>
+<tr><td>OFF</td><td>Brown-out Reset disabled</td><td></td></table>
+<table class="">
+<tr><td><b>CLKOUTEN =</b></td><td><b>Clock Out Enable</b></td><td><b></b></td></tr>
+<tr><td>OFF</td><td>CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin</td><td></td></tr>
+<tr><td>ON</td><td>CLKOUT function is enabled on the CLKOUT pin</td><td></td></table>
+<h4 class="">Register: CONFIG2 @ 0x8008 </h4>
+<table class="">
+<tr><td><b>WRT =</b></td><td><b>Flash Memory Self-Write Protection</b></td><td><b></b></td></tr>
+<tr><td>OFF</td><td>Write protection off</td><td></td></tr>
+<tr><td>BOOT</td><td>000h to 1FFh write protected, 200h to 1FFFh may be modified by EECON control</td><td></td></tr>
+<tr><td>HALF</td><td>000h to FFFh write protected, 1000h to 1FFFh may be modified by EECON control</td><td></td></tr>
+<tr><td>ALL</td><td>000h to 1FFFh write protected, no addresses may be modified by EECON control</td><td></td></table>
+<table class="">
+<tr><td><b>ZCD =</b></td><td><b>Zero Cross Detect Disable Bit</b></td><td><b></b></td></tr>
+<tr><td>OFF</td><td>ZCD disable.  ZCD can be enabled by setting the ZCDSEN bit of ZCDCON</td><td></td></tr>
+<tr><td>ON</td><td>ZCD always enabled</td><td></td></table>
+<table class="">
+<tr><td><b>PLLEN =</b></td><td><b>PLL Enable Bit</b></td><td><b></b></td></tr>
+<tr><td>ON</td><td>4x PLL is always enabled</td><td></td></tr>
+<tr><td>OFF</td><td>4x PLL is enabled when software sets the SPLLEN bit</td><td></td></table>
+<table class="">
+<tr><td><b>STVREN =</b></td><td><b>Stack Overflow/Underflow Reset Enable</b></td><td><b></b></td></tr>
+<tr><td>ON</td><td>Stack Overflow or Underflow will cause a Reset</td><td></td></tr>
+<tr><td>OFF</td><td>Stack Overflow or Underflow will not cause a Reset</td><td></td></table>
+<table class="">
+<tr><td><b>BORV =</b></td><td><b>Brown-out Reset Voltage Selection</b></td><td><b></b></td></tr>
+<tr><td>LO</td><td>Brown-out Reset Voltage (Vbor), low trip point selected.</td><td></td></tr>
+<tr><td>HI</td><td>Brown-out Reset Voltage (Vbor), high trip point selected.</td><td></td></table>
+<table class="">
+<tr><td><b>LPBOR =</b></td><td><b>Low-Power Brown Out Reset</b></td><td><b></b></td></tr>
+<tr><td>OFF</td><td>Low-Power BOR is disabled</td><td></td></tr>
+<tr><td>ON</td><td>Low-Power BOR is enabled</td><td></td></table>
+<table class="">
+<tr><td><b>LVP =</b></td><td><b>Low-Voltage Programming Enable</b></td><td><b></b></td></tr>
+<tr><td>ON</td><td>Low-voltage programming enabled</td><td></td></tr>
+<tr><td>OFF</td><td>High-voltage on MCLR/VPP must be used for programming</td><td></td></table>
+<h4 class="">Register: CONFIG3 @ 0x8009 </h4>
+<table class="">
+<tr><td><b>WDTCPS =</b></td><td><b>WDT Period Select</b></td><td><b></b></td></tr>
+<tr><td>WDTCPS0</td><td>1:32 (1 ms period)</td><td></td></tr>
+<tr><td>WDTCPS1</td><td>1:64 (2 ms period)</td><td></td></tr>
+<tr><td>WDTCPS2</td><td>1:128 (4 ms period)</td><td></td></tr>
+<tr><td>WDTCPS3</td><td>1:256 (8 ms period)</td><td></td></tr>
+<tr><td>WDTCPS4</td><td>1:512 (16 ms period)</td><td></td></tr>
+<tr><td>WDTCPS5</td><td>1:1024 (32 ms period)</td><td></td></tr>
+<tr><td>WDTCPS6</td><td>1:2048 (64 ms period)</td><td></td></tr>
+<tr><td>WDTCPS7</td><td>1:4096 (128 ms period)</td><td></td></tr>
+<tr><td>WDTCPS8</td><td>1:8192 (256 ms period)</td><td></td></tr>
+<tr><td>WDTCPS9</td><td>1:16384 (512 ms period)</td><td></td></tr>
+<tr><td>WDTCPSA</td><td>1:32768 (1 s period)</td><td></td></tr>
+<tr><td>WDTCPSB</td><td>1:65536 (2 s period)</td><td></td></tr>
+<tr><td>WDTCPSC</td><td>1:131072 (4 s period)</td><td></td></tr>
+<tr><td>WDTCPSD</td><td>1:262144 (8 s period)</td><td></td></tr>
+<tr><td>WDTCPSE</td><td>1:524299 (16 s period)</td><td></td></tr>
+<tr><td>WDTCPSF</td><td>1:1048576 (32 s period)</td><td></td></tr>
+<tr><td>WDTCPS10</td><td>1:2097152 (64 s period)</td><td></td></tr>
+<tr><td>WDTCPS11</td><td>1:4194304 (128 s period)</td><td></td></tr>
+<tr><td>WDTCPS12</td><td>1:8388608 (256 s period)</td><td></td></tr>
+<tr><td>WDTCPS1F</td><td>Software Control (WDTPS)</td><td></td></table>
+<table class="">
+<tr><td><b>WDTE =</b></td><td><b>Watchdog Timer Enable</b></td><td><b></b></td></tr>
+<tr><td>ON</td><td>WDT enabled</td><td></td></tr>
+<tr><td>NSLEEP</td><td>WDT enabled while running and disabled in Sleep</td><td></td></tr>
+<tr><td>SWDTEN</td><td>WDT controlled by the SWDTEN bit in the WDTCON register</td><td></td></tr>
+<tr><td>OFF</td><td>WDT disabled</td><td></td></table>
+<table class="">
+<tr><td><b>WDTCWS =</b></td><td><b>WDT Window Select</b></td><td><b></b></td></tr>
+<tr><td>WDTCWS125</td><td>12.5 percent window open time</td><td></td></tr>
+<tr><td>WDTCWS25</td><td>25 percent window open time</td><td></td></tr>
+<tr><td>WDTCWS375</td><td>37.5 percent window open time</td><td></td></tr>
+<tr><td>WDTCWS50</td><td>50 percent window open time</td><td></td></tr>
+<tr><td>WDTCWS625</td><td>62.5 percent window open time</td><td></td></tr>
+<tr><td>WDTCWS75</td><td>75 percent window open time</td><td></td></tr>
+<tr><td>WDTCWS100</td><td>100 percent window open time (Legacy WDT)</td><td></td></tr>
+<tr><td>WDTCWSSW</td><td>Software WDT window size control (WDTWS bits)</td><td></td></table>
+<table class="">
+<tr><td><b>WDTCCS =</b></td><td><b>WDT Input Clock Selector</b></td><td><b></b></td></tr>
+<tr><td>LFINTOSC</td><td>31.0 kHz LFINTOSC</td><td></td></tr>
+<tr><td>MFINTOSC</td><td>31.25 kHz HFINTOSC (MFINTOSC)</td><td></td></tr>
+<tr><td>SWC</td><td>Software control, controlled by WDTCS bits</td><td></td></table>
+<h4 class="">Register: IDLOC0 @ 0x8000 </h4>
+<h4 class="">Register: IDLOC1 @ 0x8001 </h4>
+<h4 class="">Register: IDLOC2 @ 0x8002 </h4>
+<h4 class="">Register: IDLOC3 @ 0x8003 </h4>
+<small><a href="#top">Back to top</a></small>
+<small><a href="#top">Back to top</a></small>
+</BODY>
+</HTML>

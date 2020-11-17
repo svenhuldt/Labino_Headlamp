@@ -1,0 +1,362 @@
+<!-- Version 2.19 -->
+<!-- Generated 30/09/2019 GMT -->
+
+<!--
+ Copyright © 2019, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ All rights reserved.
+ 
+ This software is developed by Microchip Technology Inc. and its subsidiaries ("Microchip").
+ 
+ Redistribution and use in source and binary forms, with or without modification, are
+ permitted provided that the following conditions are met:
+ 
+     1. Redistributions of source code must retain the above copyright notice, this list of
+        conditions and the following disclaimer.
+ 
+     2. Redistributions in binary form must reproduce the above copyright notice, this list
+        of conditions and the following disclaimer in the documentation and/or other
+        materials provided with the distribution.
+ 
+     3. Microchip's name may not be used to endorse or promote products derived from this
+        software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<HTML>
+<HEAD>
+<TITLE>Microchip MPLAB XC8 C Compiler: 16LF1716 Support Information</TITLE>
+</HEAD>
+<BODY>
+<h2>16LF1716 Support Information</h2>
+<h3>#pragma config Usage</h3>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;setting&gt;=&lt;named value&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Oscillator Selection Bits : ECH, External Clock, High Power Mode (4-20 MHz): device clock supplied to CLKIN pins<br/>// Watchdog Timer Enable : WDT enabled<br/>// Power-up Timer Enable : PWRT disabled<br/>// MCLR Pin Function Select : MCLR/VPP pin function is MCLR<br/>// Flash Program Memory Code Protection : Program memory code protection is disabled<br/>// Brown-out Reset Enable : Brown-out Reset enabled<br/>// Clock Out Enable : CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin<br/>// Internal/External Switchover Mode : Internal/External Switchover Mode is enabled<br/>// Fail-Safe Clock Monitor Enable : Fail-Safe Clock Monitor is enabled<br/>#pragma config FOSC = ECH, WDTE = ON, PWRTE = OFF, MCLRE = ON, CP = OFF, BOREN = ON, CLKOUTEN = OFF, IESO = ON, FCMEN = ON</code></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;setting&gt;=&lt;literal constant&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Oscillator Selection Bits : ECH, External Clock, High Power Mode (4-20 MHz): device clock supplied to CLKIN pins<br/>// Watchdog Timer Enable : WDT enabled<br/>// Power-up Timer Enable : PWRT disabled<br/>// MCLR Pin Function Select : MCLR/VPP pin function is MCLR<br/>// Flash Program Memory Code Protection : Program memory code protection is disabled<br/>// Brown-out Reset Enable : Brown-out Reset enabled<br/>// Clock Out Enable : CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin<br/>// Internal/External Switchover Mode : Internal/External Switchover Mode is enabled<br/>// Fail-Safe Clock Monitor Enable : Fail-Safe Clock Monitor is enabled<br/>#pragma config FOSC = 0x7, WDTE = 0x3, PWRTE = 0x1, MCLRE = 0x1, CP = 0x1, BOREN = 0x3, CLKOUTEN = 0x1, IESO = 0x1, FCMEN = 0x1</code></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;register&gt;=&lt;literal constant&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Oscillator Selection Bits : ECH, External Clock, High Power Mode (4-20 MHz): device clock supplied to CLKIN pins<br/>// Watchdog Timer Enable : WDT enabled<br/>// Power-up Timer Enable : PWRT disabled<br/>// MCLR Pin Function Select : MCLR/VPP pin function is MCLR<br/>// Flash Program Memory Code Protection : Program memory code protection is disabled<br/>// Brown-out Reset Enable : Brown-out Reset enabled<br/>// Clock Out Enable : CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin<br/>// Internal/External Switchover Mode : Internal/External Switchover Mode is enabled<br/>// Fail-Safe Clock Monitor Enable : Fail-Safe Clock Monitor is enabled<br/>#pragma config CONFIG1 = 0xFFFF</code></td>
+</tr>
+<tr bgcolor="white">
+<td>For example:<br/><code>// IDLOC @ 0x8000<br/>#pragma config IDLOC0 = 0x127</code></td>
+</tr>
+</tbody></table>
+<br/>
+<h3>#pragma config Settings</h3>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: CONFIG1 @ 0x8007</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>FOSC</tt></b></td>
+<td><b>Oscillator Selection Bits</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ECH</tt></td>
+<td>ECH, External Clock, High Power Mode (4-20 MHz): device clock supplied to CLKIN pins</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ECM</tt></td>
+<td>ECM, External Clock, Medium Power Mode (0.5-4 MHz): device clock supplied to CLKIN pins</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ECL</tt></td>
+<td>ECL, External Clock, Low Power Mode (0-0.5 MHz): device clock supplied to CLKIN pins</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>INTOSC</tt></td>
+<td>INTOSC oscillator: I/O function on CLKIN pin</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>EXTRC</tt></td>
+<td>EXTRC oscillator: External RC circuit connected to CLKIN pin</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>HS</tt></td>
+<td>HS Oscillator, High-speed crystal/resonator connected between OSC1 and OSC2 pins</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>XT</tt></td>
+<td>XT Oscillator, Crystal/resonator connected between OSC1 and OSC2 pins</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LP</tt></td>
+<td>LP Oscillator, Low-power crystal connected between OSC1 and OSC2 pins</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>WDTE</tt></b></td>
+<td><b>Watchdog Timer Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>WDT enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>NSLEEP</tt></td>
+<td>WDT enabled while running and disabled in Sleep</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SWDTEN</tt></td>
+<td>WDT controlled by the SWDTEN bit in the WDTCON register</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>WDT disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>PWRTE</tt></b></td>
+<td><b>Power-up Timer Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>PWRT disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>PWRT enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>MCLRE</tt></b></td>
+<td><b>MCLR Pin Function Select</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>MCLR/VPP pin function is MCLR</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>MCLR/VPP pin function is digital input if LVP bit is also 0.</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CP</tt></b></td>
+<td><b>Flash Program Memory Code Protection</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>Program memory code protection is disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>Program memory code protection is enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>BOREN</tt></b></td>
+<td><b>Brown-out Reset Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>Brown-out Reset enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>NSLEEP</tt></td>
+<td>Brown-out Reset enabled while running and disabled in Sleep</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>SBODEN</tt></td>
+<td>Brown-out Reset controlled by the SBOREN bit in the BORCON register</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>Brown-out Reset disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CLKOUTEN</tt></b></td>
+<td><b>Clock Out Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>CLKOUT function is enabled on the CLKOUT pin</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>IESO</tt></b></td>
+<td><b>Internal/External Switchover Mode</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>Internal/External Switchover Mode is enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>Internal/External Switchover Mode is disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>FCMEN</tt></b></td>
+<td><b>Fail-Safe Clock Monitor Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>Fail-Safe Clock Monitor is enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>Fail-Safe Clock Monitor is disabled</td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: CONFIG2 @ 0x8008</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>WRT</tt></b></td>
+<td><b>Flash Memory Self-Write Protection</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>Write protection off</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>BOOT</tt></td>
+<td>0000h to 03FFh write protected, 0400h to 1FFFh may be modified by EECON control</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>HALF</tt></td>
+<td>0000h to 0FFFh write protected, 1000h to 1FFFh may be modified by EECON control</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ALL</tt></td>
+<td>0000h to 1FFFh write protected, no addresses may be modified by EECON control</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>PPS1WAY</tt></b></td>
+<td><b>Peripheral Pin Select one-way control</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>The PPSLOCK bit cannot be cleared once it is set by software</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>The PPSLOCK bit can be set and cleared repeatedly by software</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>ZCDDIS</tt></b></td>
+<td><b>Zero-cross detect disable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>Zero-cross detect circuit is disabled at POR and can be enabled with ZCDSEN bit.</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>Zero-cross detect circuit is always enabled.</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>PLLEN</tt></b></td>
+<td><b>Phase Lock Loop enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>4x PLL is always enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>4x PLL is enabled when software sets the SPLLEN bit</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>STVREN</tt></b></td>
+<td><b>Stack Overflow/Underflow Reset Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>Stack Overflow or Underflow will cause a Reset</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>Stack Overflow or Underflow will not cause a Reset</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>BORV</tt></b></td>
+<td><b>Brown-out Reset Voltage Selection</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LO</tt></td>
+<td>Brown-out Reset Voltage (Vbor), low trip point selected.</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>HI</tt></td>
+<td>Brown-out Reset Voltage (Vbor), high trip point selected.</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>LPBOR</tt></b></td>
+<td><b>Low-Power Brown Out Reset</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>Low-Power BOR is disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>Low-Power BOR is enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>LVP</tt></b></td>
+<td><b>Low-Voltage Programming Enable</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>Low-voltage programming enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>High-voltage on MCLR/VPP must be used for programming</td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: IDLOC0 @ 0x8000</div>
+</th>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: IDLOC1 @ 0x8001</div>
+</th>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: IDLOC2 @ 0x8002</div>
+</th>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: IDLOC3 @ 0x8003</div>
+</th>
+</tbody></table>
+<br/>
+</BODY>
+</HTML>
